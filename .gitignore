@@ -1,0 +1,17 @@
+# Python
+__pycache__/
+*.pyc
+
+# Virtual environment
+.venv/
+env/
+venv/
+
+# PyCharm settings
+.idea/
+
+# Large files (videos and weights)
+*.mp4
+*.avi
+*.mov
+*.pt
