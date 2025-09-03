@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Multi-Output Video Streams</title>
+  <style>
+    /* Reset defaults */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+      background-color: #f4f4f4;
+      color: #333;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+    }
+    header {
+      background: #333;
+      color: #fff;
+      padding: 20px;
+      text-align: center;
+    }
+    header h1 {
+      font-size: 1.8rem;
+      margin-bottom: 10px;
+    }
+    main {
+      flex: 1;
+      padding: 20px;
+    }
+    h2 {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+    form {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+    input[type="file"] {
+      padding: 5px;
+    }
+    button {
+      padding: 10px 20px;
+      background: #333;
+      color: #fff;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      margin-left: 10px;
+    }
+    button:hover {
+      background: #555;
+    }
+    .video-container {
+      display: flex;
+      justify-content: space-around;
+      flex-wrap: wrap;
+    }
+    .video-box {
+      flex: 1;
+      margin: 10px;
+      text-align: center;
+    }
+    img {
+      width: 100%;
+      max-width: 400px;
+      border: 2px solid #333;
+      border-radius: 5px;
+    }
+    footer {
+      background: #333;
+      color: #fff;
+      text-align: center;
+      padding: 10px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Joint image restoration for domain adaptive object detection in foggy weather condition</h1>
+  </header>
+  <main>
+    <h2>Video Processing Streams</h2>
+    <form method="POST" enctype="multipart/form-data">
+      <input type="file" name="video" accept="video/*" required>
+      <button type="submit">Upload Video</button>
+    </form>
+    {% if video_uploaded %}
+    <div class="video-container">
+      <div class="video-box">
+        <h3>Original Video</h3>
+        <img src="{{ url_for('video_feed_original') }}" alt="Original Video Stream">
+      </div>
+      <div class="video-box">
+        <h3>Defogged Video</h3>
+        <img src="{{ url_for('video_feed_defog') }}" alt="Defogged Video Stream">
+      </div>
+      <div class="video-box">
+        <h3>Detection Output</h3>
+        <img src="{{ url_for('video_feed_detection') }}" alt="Detection Video Stream">
+      </div>
+    </div>
+    {% endif %}
+  </main>
+  <footer>
+    <p>&copy; 2025 Your Company Name. All rights reserved.</p>
+  </footer>
+</body>
+</html>

@@ -1,0 +1,104 @@
+/* Reset some defaults */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Body & general styling */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f2f2f2;
+  color: #333;
+  margin-bottom: 2rem;
+}
+
+/* Header */
+header {
+  background-color: #3c3c3c;
+  color: #fff;
+  padding: 1rem;
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+header h1 {
+  margin: 0;
+}
+
+/* Main container */
+.container {
+  width: 90%;
+  max-width: 1000px;
+  margin: 0 auto;
+  background-color: #fff;
+  padding: 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+/* Upload form */
+.upload-section {
+  margin-bottom: 1rem;
+}
+
+.upload-section h2 {
+  margin-bottom: 0.5rem;
+}
+
+.upload-form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+  width: 50%;
+}
+
+.upload-form label {
+  font-weight: bold;
+  margin-bottom: 0.2rem;
+}
+
+.upload-form input[type="file"] {
+  padding: 0.3rem;
+  background-color: #eee;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.upload-form button {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  padding: 0.6rem 1rem;
+  font-size: 1rem;
+  border-radius: 4px;
+  cursor: pointer;
+  align-self: flex-start;
+}
+
+.upload-form button:hover {
+  background-color: #0056b3;
+}
+
+/* Horizontal rule styling */
+hr {
+  margin: 1.5rem 0;
+  border: none;
+  border-top: 1px solid #ccc;
+}
+
+/* Stream section */
+.stream-section h2 {
+  margin-bottom: 0.5rem;
+}
+
+.stream-container {
+  margin-top: 1rem;
+  text-align: center;
+}
+
+.stream-container img {
+  max-width: 100%;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}

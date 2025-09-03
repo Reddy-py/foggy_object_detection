@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>Fog Removal Result</title>
+  </head>
+  <body>
+    <h1>Fog Removal Result</h1>
+
+    <div style="display: flex; gap: 2rem;">
+      <!-- Original Image -->
+      <div>
+        <h3>Original</h3>
+        <img src="data:image/jpeg;base64,{{ original_data }}" alt="Original" style="max-width: 400px;">
+      </div>
+
+      <!-- Processed Image -->
+      <div>
+        <h3>Enhanced</h3>
+        <img src="data:image/jpeg;base64,{{ processed_data }}" alt="Processed" style="max-width: 400px;">
+      </div>
+    </div>
+
+    <p><a href="{{ url_for('index') }}">Upload another image</a></p>
+  </body>
+</html>
